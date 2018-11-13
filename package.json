@@ -1,0 +1,23 @@
+{
+  "name": "Module3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web-app.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendy31/Mobile-Web-App-NYSL-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendy31/Mobile-Web-App-NYSL-/issues"
+  },
+  "homepage": "https://github.com/Wendy31/Mobile-Web-App-NYSL-#readme",
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  }
+}

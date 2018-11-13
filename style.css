@@ -1,0 +1,311 @@
+/*..............Page................*/
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    padding: 1rem 2rem;
+}
+
+body {
+    background-color: #e8e8f7;
+}
+
+.mainBodyHeight {
+    min-height: 77vh;
+}
+
+
+/*..............Footer................*/
+.iconRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.footerIcon {
+    position: relative;
+    height: 30px;
+}
+
+.footerCenter {
+    text-align: center;
+    font-size: 12px;
+}
+
+footer {
+    height: 10%;
+    border-top: 1px solid #807d7d;
+    background-color: white;
+}
+
+
+/*..............Header................*/
+header {
+    background-color: #1973ff;
+    height: 10%;
+    margin-bottom: 0px;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+
+.teamLogo {
+    width: 35%;
+    height: 35%;
+}
+
+.allIndexIcon {
+    position: relative;
+    padding: 20%;
+}
+
+
+/*..............Text...............*/
+.bold {
+    font-weight: bold;
+}
+
+.playerSize {
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.accordianBackground {
+    border: 1px solid navy;
+    background-color: darkgrey;
+}
+
+.fixturesRow {
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    margin: 2px;
+}
+
+.left {
+    display: inline-grid;
+    margin-left: 50%;
+}
+
+.right {
+    display: inline-grid;
+    margin-right: 50%;
+}
+
+/*............NEWS: Read more/ Read less.............*/
+.noBoxButton {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #1973ff;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.noBoxButton:hover {
+    text-decoration: underline;
+    color: mediumblue;
+}
+
+.pTopLeft2 {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.h4Center {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/*...........Location...........*/
+.locationBox {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    background-color: white;
+    padding: 2px;
+}
+
+
+.locationBox2 {
+    position: relative;
+    margin: 15px;
+    border-radius: 20px;
+    border: 1px solid #807d7d;
+    background-color: white;
+    padding: 20px;
+}
+
+
+/*...........Results...........*/
+.TwoTeamsInRow {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin-top: 10px;
+    margin: 10px;
+    height: 90px;
+    padding-top: 6%;
+    box-shadow: 2px 3px #888888;
+}
+
+.teamAndLogRowLeft {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.teamAndLogRowRight {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.scoreCenter {
+    width: 10%;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.teamLogoLeft {
+    width: 40px;
+    height: 40px;
+    padding-left: 2px;
+    padding-bottom: 10px;
+    padding-right: 6px;
+}
+
+.teamLogoRight {
+    width: 40px;
+    height: 40px;
+    padding-right: 2px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+}
+
+.resultsMonth {
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #1973ff;
+    font-weight: bold;
+
+}
+
+/*...........Schedule...........*/
+.TwoTeamsInRowSchedule {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    height: 90px;
+    padding-top: 6%;
+}
+
+
+
+
+/*...........Contact...........*/
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    bottom: 10px;
+    margin-left: 15%;
+    width: 70%;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+    background-color: #001dff;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: #555;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+
+/*...............Sign in..............*/
+.registerBox {
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin: auto;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+}
