@@ -12,48 +12,48 @@ var data = {
                     "first_name": "Harry",
                     "last_name": "Churchill",
                     "position": "Goal Keeper",
-                    "photo": "src=",
-                    "age": 16,
+                    "photo": "assets/players/player.png",
+                    "age": 16
                 },
                 {
                     "first_name": "David",
                     "last_name": "Thomas",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Adam",
                     "last_name": "Orme",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 14
                 },
                 {
                     "first_name": "Michael",
                     "last_name": "Davies",
                     "position": "Mid Fielder",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 }, {
                     "first_name": "Elliott",
                     "last_name": "Jones",
                     "position": "Striker",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Nick",
                     "last_name": "Hayden",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 16,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 16
                 }, {
                     "first_name": "Chris",
                     "last_name": "Fanet",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/player.png",
+                    "age": 14
                 }
             ],
             "position": 1,
@@ -64,7 +64,7 @@ var data = {
             "gf": 17,
             "ga": 8,
             "gd": "+9",
-            "points": 16,
+            "points": 16
 
         },
         {
@@ -79,48 +79,48 @@ var data = {
                     "first_name": "Jack",
                     "last_name": "Howell",
                     "position": "Goal Keeper",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/player.png",
+                    "age": 13
                 },
                 {
                     "first_name": "Nick",
                     "last_name": "Hill",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 14
                 },
                 {
                     "first_name": "Edward",
                     "last_name": "Richardson",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Will",
                     "last_name": "Toms",
                     "position": "Mid Fielder",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 }, {
                     "first_name": "Daniel",
                     "last_name": "Sheehan",
                     "position": "Striker",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Freddie",
                     "last_name": "Lewendon",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 }, {
                     "first_name": "Oliver",
                     "last_name": "Roberts",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 16,
+                    "photo": "assets/players/player.png",
+                    "age": 16
                 }
             ],
             "position": 3,
@@ -131,7 +131,7 @@ var data = {
             "gf": 5,
             "ga": 11,
             "gd": "-6",
-            "points": 3,
+            "points": 3
         },
         {
             "name": "About To Get Messi",
@@ -145,48 +145,48 @@ var data = {
                     "first_name": "Jordan",
                     "last_name": "Hughes",
                     "position": "Goal Keeper",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/player.png",
+                    "age": 14
                 },
                 {
                     "first_name": "Zach",
                     "last_name": "Knudson",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 },
                 {
                     "first_name": "Declan",
                     "last_name": "McCabe",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Ian",
                     "last_name": "Wilson",
                     "position": "Mid Fielder",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 }, {
                     "first_name": "Lewis",
                     "last_name": "Alexander",
                     "position": "Striker",
-                    "photo": "src=",
-                    "age": 16,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 16
                 },
                 {
                     "first_name": "James",
                     "last_name": "Davies",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 }, {
                     "first_name": "Andrew",
                     "last_name": "Gardner",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/player.png",
+                    "age": 14
                 }
             ],
             "position": 4,
@@ -197,7 +197,7 @@ var data = {
             "gf": 4,
             "ga": 9,
             "gd": "-5",
-            "points": 0,
+            "points": 0
         },
         {
             "name": "Pornmouth F.C.",
@@ -211,48 +211,48 @@ var data = {
                     "first_name": "Curtis",
                     "last_name": "Scotto",
                     "position": "Goal Keeper",
-                    "photo": "src=",
-                    "age": 16,
+                    "photo": "assets/players/player.png",
+                    "age": 16
                 },
                 {
                     "first_name": "Joel",
                     "last_name": "Hajgato",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 },
                 {
                     "first_name": "Christopher",
                     "last_name": "Conteh",
                     "position": "Defender",
-                    "photo": "src=",
-                    "age": 14,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 14
                 },
                 {
                     "first_name": "Michael",
                     "last_name": "Hodge",
                     "position": "Mid Fielder",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 }, {
                     "first_name": "Ben",
                     "last_name": "Almun",
                     "position": "Striker",
-                    "photo": "src=",
-                    "age": 15,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 15
                 },
                 {
                     "first_name": "Josh",
                     "last_name": "Graham",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/football-player-blue.svg",
+                    "age": 13
                 }, {
                     "first_name": "Joe",
                     "last_name": "Evans",
                     "position": "Substitute",
-                    "photo": "src=",
-                    "age": 13,
+                    "photo": "assets/players/player.png",
+                    "age": 13
                 }
             ],
             "position": 2,
@@ -263,116 +263,116 @@ var data = {
             "gf": 5,
             "ga": 3,
             "gd": "+2",
-            "points": 4,
-        },
-        {
+            "points": 4
+        }],
+        
             "matches": [
                 {
-                    "game_1_date": "Sat 17th, Nov 2018",
-                    "game_1_team_1_name": "About To Get Messi",
-                    "game_1_team_1_logo": "messi",
-                    "game_1_team_2_name": "The Octopussy",
-                    "game_1_team_2_logo": "octopussy",
-                    "game_1_time": "14:00",
+                    "date": "Sat 17th, Nov 2018",
+                    "home_team_name": "About To Get Messi",
+                    "home_team_logo": "messi",
+                    "away_team_name": "The Octopussy",
+                    "away_team_logo": "octopussy",
+                    "game_time": "14:00",
                     "location": "GenQuip Stadium, Victoria Road, PORT TALBOT, SA12 6AD",
-                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.784873416679!2d-3.8043594848176774!3d51.59050601244532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e673029adaa05%3A0x8f61d7c16c6c9f3d!2sPort+Talbot+Town+Football+Club!5e0!3m2!1sen!2ses!4v1542021409236",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.784873416679!2d-3.8043594848176774!3d51.59050601244532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e673029adaa05%3A0x8f61d7c16c6c9f3d!2sPort+Talbot+Town+Football+Club!5e0!3m2!1sen!2ses!4v1542021409236"
                 },
                 {
-                    "game_2_date": "Sun 18th, Nov 2018",
-                    "game_2_team_1_name": "Pornmouth F.C.",
-                    "game_2_team_1_logo": "pornmouth",
-                    "game_2_team_2_name": "The Octopussy",
-                    "game_2_team_2_logo": "octopussy",
-                    "game_2_time": "14:00",
+                    "date": "Sun 18th, Nov 2018",
+                    "home_team_name": "Pornmouth F.C.",
+                    "home_team_logo": "pornmouth",
+                    "away_team_name": "The Octopussy",
+                    "away_team_logo": "octopussy",
+                    "game_time": "14:00",
                     "location": "The Willows, Willows High School, Tremorfa, CARDIFF, CF24 2YE",
-                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5876110095573!2d-3.138994184822326!3d51.48408352022956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1d28b7c08a4f%3A0x394c402a77b8c582!2sWillows+High+School!5e0!3m2!1sen!2ses!4v1542021732840",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5876110095573!2d-3.138994184822326!3d51.48408352022956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1d28b7c08a4f%3A0x394c402a77b8c582!2sWillows+High+School!5e0!3m2!1sen!2ses!4v1542021732840"
                 },
                 {
-                    "game_3_date": "Sat 24th, Nov 2018",
-                    "game_3_team_1_name": "About To Get Messi",
-                    "game_3_team_1_logo": "messi",
-                    "game_3_team_2_name": "Pornmouth F.C.",
-                    "game_3_team_2_logo": "pornmouth",
-                    "game_3_time": "14:00",
+                    "date": "Sat 24th, Nov 2018",
+                    "home_team_name": "About To Get Messi",
+                    "home_team_logo": "messi",
+                    "away_team_name": "Pornmouth F.C.",
+                    "away_team_logo": "pornmouth",
+                    "game_time": "14:00",
                     "location": "GenQuip Stadium, Victoria Road, PORT TALBOT, SA12 6AD",
-                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.784873416679!2d-3.8043594848176774!3d51.59050601244532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e673029adaa05%3A0x8f61d7c16c6c9f3d!2sPort+Talbot+Town+Football+Club!5e0!3m2!1sen!2ses!4v1542021409236",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.784873416679!2d-3.8043594848176774!3d51.59050601244532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e673029adaa05%3A0x8f61d7c16c6c9f3d!2sPort+Talbot+Town+Football+Club!5e0!3m2!1sen!2ses!4v1542021409236"
                 },
                 {
-                    "game_4_date": "Sun 25th, Nov 2018",
-                    "game_4_team_1_name": "Pornmouth F.C.",
-                    "game_4_team_1_logo": "pornmouth",
-                    "game_4_team_2_name": "About To Get Messi",
-                    "game_4_team_2_logo": "messi",
-                    "game_4_time": "14:00",
+                    "date": "Sun 25th, Nov 2018",
+                    "home_team_name": "Pornmouth F.C.",
+                    "home_team_logo": "pornmouth",
+                    "away_team_name": "About To Get Messi",
+                    "away_team_logo": "messi",
+                    "game_time": "14:00",
                     "location": "The Willows, Willows High School, Tremorfa, CARDIFF, CF24 2YE",
-                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5876110095573!2d-3.138994184822326!3d51.48408352022956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1d28b7c08a4f%3A0x394c402a77b8c582!2sWillows+High+School!5e0!3m2!1sen!2ses!4v1542021732840",
+                    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5876110095573!2d-3.138994184822326!3d51.48408352022956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e1d28b7c08a4f%3A0x394c402a77b8c582!2sWillows+High+School!5e0!3m2!1sen!2ses!4v1542021732840"
                 }],
             "results": [
                 {
-                    "game_1_date": "Sat 20th, Oct 2018",
-                    "game_1_team_1_name": "Ass 'n' all F.C.",
-                    "game_1_team_1_logo": "assnall",
-                    "game_1_team_2_name": "The Octopussy",
-                    "game_1_team_2_logo": "octopussy",
-                    "score": "4-2",
+                    "date": "Sat 20th, Oct 2018",
+                    "home_team_name": "Ass 'n' all F.C.",
+                    "home_team_logo": "assnall",
+                    "away_team_name": "The Octopussy",
+                    "away_team_logo": "octopussy",
+                    "score": "4-2"
                 },
                 {
-                    "game_2_date": "Sun 21st, Oct 2018",
-                    "game_2_team_1_name": "Ass 'n' all F.C.",
-                    "game_2_team_1_logo": "assnall",
-                    "game_2_team_2_name": "About To Get Messi",
-                    "game_2_team_2_logo": "messi",
-                    "score": "4-1",
+                    "date": "Sun 21st, Oct 2018",
+                    "home_team_name": "Ass 'n' all F.C.",
+                    "home_team_logo": "assnall",
+                    "away_team_name": "About To Get Messi",
+                    "away_team_logo": "messi",
+                    "score": "4-1"
                 },
                 {
-                    "game_3_date": "Sat 27th, Oct 2018",
-                    "game_3_team_1_name": "Ass 'n' all F.C.",
-                    "game_3_team_1_logo": "assnall",
-                    "game_3_team_2_name": "Pornmouth F.C.",
-                    "game_3_team_2_logo": "pornmouth",
-                    "score": "1-1",
+                    "date": "Sat 27th, Oct 2018",
+                    "home_team_name": "Ass 'n' all F.C.",
+                    "home_team_logo": "assnall",
+                    "away_team_name": "Pornmouth F.C.",
+                    "away_team_logo": "pornmouth",
+                    "score": "1-1"
                 },
                 {
-                    "game_4_date": "Sun 28th, Oct 2018",
-                    "game_4_team_1_name": "The Octopussy",
-                    "game_4_team_1_logo": "octopussy",
-                    "game_4_team_2_name": "Ass 'n' all F.C.",
-                    "game_4_team_2_logo": "assnall",
-                    "score": "1-3",
+                    "date": "Sun 28th, Oct 2018",
+                    "home_team_name": "The Octopussy",
+                    "home_team_logo": "octopussy",
+                    "away_team_name": "Ass 'n' all F.C.",
+                    "away_team_logo": "assnall",
+                    "score": "1-3"
                 },
                 {
-                    "game_5_date": "Sat 3rd, Nov 2018",
-                    "game_5_team_1_name": "About To Get Messi",
-                    "game_5_team_1_logo": "messi",
-                    "game_5_team_2_name": "Ass 'n' all F.C.",
-                    "game_5_team_2_logo": "assnall",
-                    "score": "2-3",
+                    "date": "Sat 3rd, Nov 2018",
+                    "home_team_name": "About To Get Messi",
+                    "home_team_logo": "messi",
+                    "away_team_name": "Ass 'n' all F.C.",
+                    "away_team_logo": "assnall",
+                    "score": "2-3"
                 },
                 {
-                    "game_6_date": "Sun 4th, Nov 2018",
-                    "game_6_team_1_name": "Pornmouth F.C.",
-                    "game_6_team_1_logo": "pornmouth",
-                    "game_6_team_2_name": "Ass 'n' all F.C.",
-                    "game_6_team_2_logo": "assnall",
-                    "score": "1-2",
+                    "date": "Sun 4th, Nov 2018",
+                    "home_team_name": "Pornmouth F.C.",
+                    "home_team_logo": "pornmouth",
+                    "away_team_name": "Ass 'n' all F.C.",
+                    "away_team_logo": "assnall",
+                    "score": "1-2"
                 },
                 {
-                    "game_7_date": "Sat 10th, Nov 2018",
-                    "game_7_team_1_name": "The Octopussy",
-                    "game_7_team_1_logo": "octopussy",
-                    "game_7_team_2_name": "About To Get Messi",
-                    "game_7_team_2_logo": "messi",
-                    "score": "2-1",
+                    "date": "Sat 10th, Nov 2018",
+                    "home_team_name": "The Octopussy",
+                    "home_team_logo": "octopussy",
+                    "away_team_name": "About To Get Messi",
+                    "away_team_logo": "messi",
+                    "score": "2-1"
                 },
                 {
-                    "game_8_date": "Sun 11th, Nov 2018",
-                    "game_8_team_1_name": "The Octopussy",
-                    "game_8_team_1_logo": "octopussy",
-                    "game_8_team_2_name": "Pornmouth F.C.",
-                    "game_8_team_2_logo": "pornmouth",
-                    "score": "0-3",
+                    "date": "Sun 11th, Nov 2018",
+                    "home_team_name": "The Octopussy",
+                    "home_team_logo": "octopussy",
+                    "away_team_name": "Pornmouth F.C.",
+                    "away_team_logo": "pornmouth",
+                    "score": "0-3"
                 }
             ]
         }
-]
-}
+
+

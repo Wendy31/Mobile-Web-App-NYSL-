@@ -4,20 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="shortcut icon" sizes="128x128" href="logo.png">
+    <link rel="shortcut icon" sizes="196x196" href="logo.png">
+
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="logo.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     <div class="container-flow" id="app">
 
-        <header class="sticky-top">
+
+        <header class="header sticky-top">
 
             <nav class="navbar navbar-dark navbar-1 text-white">
 
                 <!-- Navbar brand -->
-                <a class="navbar-brand" href="#"><img src="logo.png" style="width: 20%">Teams</a>
+                <a class="navbar-brand" href="#"><img src="logo.png" style="width: 20%">WFL</a>
 
                 <!-- Collapse button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -27,37 +45,30 @@
 
                     <!-- Links -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" v-on:click="showPage('indexPage')" href="#" data-toggle="collapse" data-target="#navbarSupportedContent15">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">News</a>
+                            <a class="nav-link" v-on:click="showPage('newsPage')" href="#" data-toggle="collapse" data-target="#navbarSupportedContent15">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="match-info.html">Matches</a>
-                            <ul>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="schedule.html">Fixtures</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="results.html">Results</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="leaguetable.html">League Table</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="location.html">Location</a>
-                                </li>
-                            </ul>
+                            <a class="nav-link" v-on:click="showPage('fixturesPage')" data-toggle="collapse" data-target="#navbarSupportedContent15">Matches</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team-info.html">Team</a>
+                            <a class="nav-link" href="#" v-on:click="showPage('resultsPage')" data-toggle="collapse" data-target="#navbarSupportedContent15">Results</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="#" v-on:click="showPage('leagueTablePage')" data-toggle="collapse" data-target="#navbarSupportedContent15">League Table</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Sign in</a>
+                            <a class="nav-link" href="#" v-on:click="showPage('locationPage')" data-toggle="collapse" data-target="#navbarSupportedContent15">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="showPage('contactPage')" data-toggle="collapse" data-target="#navbarSupportedContent15">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" v-on:click="showPage('loginPage')" data-toggle="collapse" data-target="#navbarSupportedContent15">Sign in</a>
                         </li>
                     </ul>
                 </div>
@@ -65,18 +76,575 @@
         </header>
 
         <div class="mainBodyHeight">
-            <div class="allIndexIcon">
-                <div class="d-flex align-content-center flex-wrap">
-                    <img class="col-6 col-md-4" src="assets/team-logo/assnall.png">
-                    <img class="col-6 col-md-4" src="assets/team-logo/messi.png">
-                    <img class="col-6 col-md-4" src="assets/team-logo/octopussy.png">
-                    <img class="col-6 col-md-4" src="assets/team-logo/pornmouth.png">
+
+            <div v-show="page == 'indexPage'">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6" v-for="team in teams">
+                            <a class="nav-link" href="#" v-on:click="showPage('teamInfoPage') ; getTeamInfo(team)">
+                                <img class="teamLogoIndex" v-bind:src="'assets/team-logo/' + team.logo + '.png'">
+                            </a>
+                            <h5 class="text-center">{{team.name}}</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div v-show="page == 'resultsPage'">
+
+                <div v-for="result in results">
+                    <div class="col-m-3 ml-3 mt-4 text-primary">
+                        <h5>{{result.date}}</h5>
+                    </div>
+
+                    <div class="TwoTeamsInRow">
+                        <div class="teamAndLogRowLeft">
+                            <h5>{{result.home_team_name}}</h5>
+                            <img class="teamLogoLeft" v-bind:src="'assets/team-logo/' + result.home_team_logo + '.png'">
+                        </div>
+                        <div class="scoreCenter">
+                            <h5>{{result.score}}</h5>
+                        </div>
+                        <div class="teamAndLogRowRight">
+                            <img class="teamLogoRight" v-bind:src="'assets/team-logo/' + result.away_team_logo + '.png'">
+                            <h5>{{result.away_team_name}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-show="page == 'fixturesPage'">
+                <img src="assets/background/background-stadium.jpg" class="img-fluid" alt="Responsive image">
+
+                <div v-for="match in matches">
+                    <a v-on:click="showPage('matchInfoPage'); getMatchInfo(match)">
+
+                        <div class="col-m-3 ml-3 mt-4 text-primary">
+                            <h5>{{match.date}}</h5>
+                        </div>
+
+                        <div class="TwoTeamsInRowSchedule">
+                            <div class="teamAndLogoRowLeftSchedule">
+                                <h5>{{match.home_team_name}}</h5>
+                                <img class="teamLogoLeftSchedule" v-bind:src="'assets/team-logo/' + match.home_team_logo + '.png'">
+                            </div>
+                            <div class="timeCenter">
+                                <h5>{{match.game_time}}</h5>
+                            </div>
+                            <div class="teamAndLogoRowRightSchedule">
+                                <img class="teamLogoRightSchedule" v-bind:src="'assets/team-logo/' + match.away_team_logo + '.png'">
+                                <h5>{{match.away_team_name}}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div v-show="page == 'matchInfoPage'">
+
+                <div class="dateMatch">
+                    <h4>{{match.date}}</h4>
+                </div>
+
+                <div class="matchBox">
+
+                    <div class="rowLogoMacth">
+                        <div class="leftLogoMatch">
+                            <img class="teamLogoMI" v-bind:src="'assets/team-logo/' + match.home_team_logo + '.png'">
+                        </div>
+                        <div class="timeCenterMatch">
+                            <h4>{{match.game_time}}</h4>
+                        </div>
+
+                        <div class="rightLogoMatch">
+                            <img class="teamLogoMI" v-bind:src="'assets/team-logo/' + match.away_team_logo + '.png'">
+                        </div>
+                    </div>
+
+                    <div class="namesMatch">
+                        <h5 class="nameLeftMatch">{{match.home_team_name}}</h5>
+                        <h5 class="nameRightMatch">{{match.away_team_name}}</h5>
+                    </div>
+
+                </div>
+
+                <div class="addressMatch">
+                    <p>{{match.location}}</p>
+                </div>
+
+                <div class="mapMatch">
+                    <iframe v-bind:src="match.map" allowfullscreen></iframe>
+                </div>
+
+                <div id="accordion">
+                    <div class="card" id="playerList">
+                        <div class="card-header">
+                            <a v-on:click="showLogInMessage()" class="card-link" data-toggle="collapse" href="#collapseOne">
+                                Players
+                            </a>
+                        </div>
+<!--                                                .name problem-->
+                        <div id="collapseOne" class="collapse" data-parent="#accordion">
+                            <div class="card-body row players" data-toggle="collapse" v-if="member">
+                                <img class="img-fluid" alt="Responsive image" src="assets/background/astroturf.jpg">
+
+                                <div class="col-xs-6">
+                                    <div v-for="player in homeTeam.players">
+                                        <h5>{{player.name}}</h5>
+                                        <h6>{{player.position}}</h6>
+                                        <img class="playerSize" v-bind:src="player.photo">
+                                        <p>{{player.first_name}} {{player.last_name}}</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-xs-6">
+                                    <div v-for="player in awayTeam.players">
+                                        <h5>{{player.name}}</h5>
+                                        <h6>{{player.position}}</h6>
+                                        <img class="playerSize" v-bind:src="player.photo">
+                                        <p>{{player.first_name}} {{player.last_name}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-show="page == 'teamInfoPage'">
+                <img class="teamLogo" v-bind:src="'assets/team-logo/' + teamInfo.logo +'.png'">
+                <h5>{{teamInfo.name}}</h5>
+
+
+                <div>
+                    <h6 class="bold">Location</h6>
+                    <p>{{teamInfo.location}}</p>
+                </div>
+
+                <div>
+                    <h6 class="bold">Contact</h6>
+                    <p>{{teamInfo.telephone}}}</p>
+                    <p>{{teamInfo.email}}}</p>
+                </div>
+
+                <div id="accordion1">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne1">
+                                Players
+                            </a>
+                        </div>
+                        <div id="collapseOne1" class="collapse" data-parent="#accordion1">
+                            <div class="card-body">
+
+                                <img class="img-fluid" alt="Responsive image" src="assets/background/astroturf.jpg">
+
+
+                                <div v-for="player in teamInfo.players">
+                                    <h6>{{player.position}}</h6>
+                                    <img class="playerSize" v-bind:src="player.photo">
+                                    <p>{{player.first_name}} {{player.last_name}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+<!--
+
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo1">
+                                    Upcoming Matches
+                                </a>
+                            </div>
+                            <div id="collapseTwo1" class="collapse" data-parent="#accordion1">
+
+                                <div class="card-body" v-for="match in teamInfo" v-if="match.matches.home_team_name == 'Ass \'n\' all F.C.' && 'About To Get Messi' && 'The Octopussy' && 'Pornmouth F.C.'|| match.matches.away_team_name == 'Ass \'n\' all F.C.' && 'About To Get Messi' && 'The Octopussy' && 'Pornmouth F.C.'">
+
+                                    <h5>{{match.matches.date}}</h5>
+
+                                    <div class="TwoTeamsInRowSchedule">
+                                        <div class="teamAndLogRowLeft">
+                                            <h5>{{match.matches.home_team_name}}</h5>
+                                            <img class="teamLogoLeft" v-bind:src="'assets/team-logo/' + match.matches.home_team_logo + '.png'">
+                                        </div>
+                                        <div class="scoreCenter">
+                                            <h5>{{match.matches.game_time}}</h5>
+                                        </div>
+                                        <div class="teamAndLogRowRight">
+                                            <img class="teamLogoRight" v-bind:src="'assets/team-logo/' + match.matches.away_team_logo + '.png'">
+                                            <h5>{{match.matches.away_team_name}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+
+            <div v-show="page == 'contactPage'">
+           
+                <div class="chat">
+                    <div id="posts" class="box">
+                        Loading posts...
+                    </div>
+
+                    <div class="inputs">
+
+                        <input id="textInput" class="input" type="text" placeholder="Your message...">
+
+                        <button id="create-post" class="button is-primary" v-on:click="writeNewPost()">Send</button>
+
+
+                    </div>
+                    <!-- CHANGE THIS CODE BY YOURS -->
+                </div>
+
+            </div>
+
+
+            <div v-show="page == 'locationPage'">
+
+                <div class="d-flex flex-column" v-for="team in teams">
+
+                    <div class="locationBox2">
+                        <div class="locationBox">
+                            <div class="d-inline-flex p-2 bd-highlight">
+
+                                <img class="teamLogo" v-bind:src="'assets/team-logo/' + team.logo + '.png'">
+                                <div class="locationName">
+                                    <h5>{{team.name}}</h5>
+                                </div>
+
+                            </div>
+                            <div class="address">
+                                <p>{{team.location}}</p>
+                            </div>
+                        </div>
+                        <iframe v-bind:src="team.map" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div v-show="page == 'loginPage'">
+
+                <div class="registerBox">
+                    <div>
+                        <h5>Welcome to the Welsh Football League!</h5>
+                    </div>
+                    <div>
+                        <p>Sign into your account to access:</p>
+                    </div>
+                    <div>
+                        <p>Fantasy Welsh League football game
+                            <br>
+                            Exclusive fan services <br>
+                            Customised site content <br>
+                            Favourite club information and notification</p>
+                    </div>
+                </div>
+                <button v-show="logInBtn" id="login" class="buttonSignin" v-on:click="login()">Log in!</button>
+                <button v-show="logOutBtn" id="logout" class="buttonSignin" v-on:click="logout()">Log out</button>
+            </div>
+
+            <!--
+            <div v-show="page == 'messiTeamInfoPage'">
+                <img class="teamLogo" src="assets/team-logo/messi.png">
+                <h5>{{teams[2].name}}</h5>
+
+
+                <div>
+                    <h6 class="bold">Location</h6>
+                    <p>{{teams[2].location}}</p>
+                </div>
+
+                <div>
+                    <h6 class="bold">Contact</h6>
+                    <p>{{teams[2].telephone}}}</p>
+                    <p>{{teams[2].email}}}</p>
+                </div>
+
+                <div id="accordion2">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne2">
+                                Players
+                            </a>
+                        </div>
+                        <div v-if="login()" id="collapseOne2" class="collapse" data-parent="#accordion2">
+                            <div class="card-body">
+
+                                <img class="img-fluid" alt="Responsive image" src="assets/background/astroturf.jpg">
+
+
+                                <div v-for="player in teams[2].players">
+                                    <h6>{{player.position}}</h6>
+                                    <img class="playerSize" v-bind:src="player.photo">
+                                    <p>{{player.first_name}} {{player.last_name}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo2">
+                                    Upcoming Matches
+                                </a>
+                            </div>
+                            <div id="collapseTwo2" class="collapse" data-parent="#accordion2">
+
+                                <div class="card-body" v-for="match in matches" v-if="match.home_team_name == 'About To Get Messi' || match.away_team_name == 'About To Get Messi'">
+
+                                    <h5>{{match.date}}</h5>
+
+                                    <div class="TwoTeamsInRowSchedule">
+                                        <div class="teamAndLogRowLeft">
+                                            <h5>{{match.home_team_name}}</h5>
+                                            <img class="teamLogoLeft" v-bind:src="'assets/team-logo/' + match.home_team_logo + '.png'">
+                                        </div>
+                                        <div class="scoreCenter">
+                                            <h5>{{match.game_time}}</h5>
+                                        </div>
+                                        <div class="teamAndLogRowRight">
+                                            <img class="teamLogoRight" v-bind:src="'assets/team-logo/' + match.away_team_logo + '.png'">
+                                            <h5>{{match.away_team_name}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+            <div v-show="page == 'newsPage'">
+
+                <img class="img-fluid" src="assets/background/news-interview.jpg">
+
+                <div class="pTopLeft2">
+                    <h4 class="h4Center">Warnock: We’ve improved nearly every game</h4>
+
+                    <p>Pornmouth FC boss Neil Warnock addressed the assembled press and media on Thursday morning at the Vale Resort.
+
+                        Harry Arter will miss our match with Brighton & Hove Albion through suspension, but Joe Ralls is now available to be picked. The manager began by giving us a further update on his squ<span id="dots1">...</span><span id="more1">ad. City’s match against the Seagulls is their second home game on the bounce, following last week’s slender defeat to Leicester City.
+
+                            “It was a difficult week last week for everybody,” admitted Warnock. “Certain players felt it more than others. At the end of the week to come away with nothing was a huge disappointment.
+
+                            “The one consistent thing is the training has been fantastic. They’re a great bunch of lads. We know we’re a bit limited, but I can’t fault the attitude and that’s our best chance with the squad we’ve got - to give us a little bit more.
+
+                            “They can’t do that in effort, just concentration at moments. We can’t lose a game like last week with a lack of concentration. If it’s a wonderful goal I can take my hat off.
+
+                            “I think as a team we’ve improved nearly every game since the Bournemouth game and we’ve played far more football than people give us credit for. But it’s about getting the balance, we have changed and now we need a bit of luck. My wife says my luck is changing from today, so I can’t argue with my wife.
+
+                            “But every game is winnable for us until Christmas if we have a good day. If we didn’t win it wouldn’t be the end of the world, but Saturday is one we want to win.” </span></p>
+                    <button class="noBoxButton" onclick="showReadMoreReadLess('dots1', 'more1', 'myBtn1')" id="myBtn1">Read more</button>
+                </div>
+
+                <img class="img-fluid" alt="Responsive image" src="assets/background/assnall.jpg">
+
+                <div class="pTopLeft2">
+
+                    <h4 class="h4Center">Ass 'n' all crowds lower than reported as The Octopussy and About To Get Messi games are in spotlight</h4>
+
+                    <p>ARSENAL mis-reported crowd numbers at the Emirates Stadium by up to 5,000 fans per game last season, according to reports. While the Gunners boast sell-out figures for almost all of their home games, questions were raised after TV pictures appeared to show empty seats on a regular basis. It has since emerged figu<span id="dots2">...</span><span id="more2">res are based on tickets sold and not by the number of people who are actually at the game.
+
+                            Therefore, a season ticket holder is counted even if they don't actually attend.
+
+                            In games against Sunderland and Swansea last term the actual attendance was 5,000 fewer than what the club reported. They are also said to have overstated their attendances by over 3,000 for Liverpool's visit to the Emirates, while there is a small discrepancy of 74 for the game against Manchester United.
+
+                            "We are clear in all our communication that the attendance figures we announce reflect the number of tickets sold. This is in line with most sports stadia," an Arsenal spokesperson told the Daily Mail.
+
+                            "As a club, we want a full stadium and work hard to ensure this happens through our Ticket Transfer and Ticket Exchange services.
+                        </span></p>
+
+                    <button class="noBoxButton" onclick="showReadMoreReadLess('dots2', 'more2', 'myBtn2')" id="myBtn2">Read more</button>
+                </div>
+            </div>
+
+            <!--
+            <div v-show="page == 'octoTeamInfoPage'">
+
+                <img class="teamLogo" src="assets/team-logo/messi.png">
+                <h5>{{teams[1].name}}</h5>
+
+
+                <div>
+                    <h6 class="bold">Location</h6>
+                    <p>{{teams[1].location}}</p>
+                </div>
+
+                <div>
+                    <h6 class="bold">Contact</h6>
+                    <p>{{teams[1].telephone}}}</p>
+                    <p>{{teams[1].email}}}</p>
+                </div>
+
+                <div id="accordion3">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne3">
+                                Players
+                            </a>
+                        </div>
+                        <div id="collapseOne3" class="collapse" data-parent="#accordion3">
+                            <div class="card-body">
+
+                                <img class="img-fluid" alt="Responsive image" src="assets/background/astroturf.jpg">
+
+
+                                <div v-for="player in teams[1].players">
+                                    <h6>{{player.position}}</h6>
+                                    <img class="playerSize" v-bind:src="player.photo">
+                                    <p>{{player.first_name}} {{player.last_name}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo3">
+                                    Upcoming Matches
+                                </a>
+                            </div>
+                            <div id="collapseTwo3" class="collapse" data-parent="#accordion3">
+
+                                <div class="card-body" v-for="match in matches" v-if="match.home_team_name == 'The Octopussy' || match.away_team_name == 'The Octopussy'">
+
+                                    <h5>{{match.date}}</h5>
+
+                                    <div class="TwoTeamsInRowSchedule">
+                                        <div class="teamAndLogRowLeft">
+                                            <h5>{{match.home_team_name}}</h5>
+                                            <img class="teamLogoLeft" v-bind:src="'assets/team-logo/' + match.home_team_logo + '.png'">
+                                        </div>
+                                        <div class="scoreCenter">
+                                            <h5>{{match.game_time}}</h5>
+                                        </div>
+                                        <div class="teamAndLogRowRight">
+                                            <img class="teamLogoRight" v-bind:src="'assets/team-logo/' + match.away_team_logo + '.png'">
+                                            <h5>{{match.away_team_name}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+
+            <!--
+            <div v-show="page == 'pmouthTeamInfoPage'">
+                <img class="teamLogo" src="assets/team-logo/pornmouth.png">
+                <h5>{{teams[3].name}}</h5>
+
+                <div>
+                    <h6 class="bold">Location</h6>
+                    <p>{{teams[3].location}}</p>
+                </div>
+
+                <div>
+                    <h6 class="bold">Contact</h6>
+                    <p>{{teams[3].telephone}}</p>
+                    <p>{{teams[3].email}}</p>
+                </div>
+
+                <div id="accordion4">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne4">
+                                Players
+                            </a>
+                        </div>
+                        <div id="collapseOne4" class="collapse" data-parent="#accordion4">
+                            <div class="card-body">
+                                <img class="img-fluid" alt="Responsive image" src="assets/background/astroturf.jpg">
+
+                                <div v-for="player in teams[3].players">
+                                    <h6>{{player.position}}</h6>
+                                    <img class="playerSize" v-bind:src="player.photo">
+                                    <p>{{player.first_name}} {{player.last_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                                Upcoming Matches
+                            </a>
+                        </div>
+                        <div id="collapseTwo4" class="collapse" data-parent="#accordion4">
+                            <div class="card-body" v-for="match in matches" v-if="match.home_team_name == 'Pornmouth F.C.' || match.away_team_name == 'Pornmouth F.C.'">
+
+                                <h5>{{match.date}}</h5>
+
+                                <div class="TwoTeamsInRowSchedule">
+                                    <div class="teamAndLogRowLeft">
+                                        <h5>{{match.home_team_name}}</h5>
+                                        <img class="teamLogoLeft" v-bind:src="'assets/team-logo/' + match.home_team_logo + '.png'">
+                                    </div>
+                                    <div class="scoreCenter">
+                                        <h5>{{match.game_time}}</h5>
+                                    </div>
+                                    <div class="teamAndLogRowRight">
+                                        <img class="teamLogoRight" v-bind:src="'assets/team-logo/' + match.away_team_logo + '.png'">
+                                        <h5>{{match.away_team_name}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+-->
+
+            <div v-show="page == 'leagueTablePage'">
+                <table class="table table-striped table-responsive pt-3 text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Position</th>
+                            <th scope="col">Club</th>
+                            <th scope="col">Played</th>
+                            <th scope="col">Won</th>
+                            <th scope="col">Drawn</th>
+                            <th scope="col">Lost</th>
+                            <th scope="col">GF</th>
+                            <th scope="col">GA</th>
+                            <th scope="col">GD</th>
+                            <th scope="col">PTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="team in teams">
+                            <td>{{team.position}}</td>
+                            <td>{{team.name}}</td>
+                            <td>{{team.played}}</td>
+                            <td>{{team.won}}</td>
+                            <td>{{team.draw}}</td>
+                            <td>{{team.lost}}</td>
+                            <td>{{team.gf}}</td>
+                            <td>{{team.ga}}</td>
+                            <td>{{team.gd}}</td>
+                            <td>{{team.points}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
         </div>
     </div>
 
-    <footer class="sticky-bottom" style="height: 10%">
+    <footer class="footer sticky-bottom" style="height: 16vh">
         <div class="iconRow">
             <img class="footerIcon" src="assets/icons/fb-icon.png"> <img class="footerIcon" src="assets/icons/insta-icon.png"> <img class="footerIcon" src="assets/icons/twitter-icon.png">
         </div>
@@ -84,11 +652,27 @@
 
     </footer>
 
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCi9M1zLvh89R6hVadEw4oyiCZcgwR8tn4",
+            authDomain: "welsh-league-mobile-web-app.firebaseapp.com",
+            databaseURL: "https://welsh-league-mobile-web-app.firebaseio.com",
+            projectId: "welsh-league-mobile-web-app",
+            storageBucket: "welsh-league-mobile-web-app.appspot.com",
+            messagingSenderId: "737595737569"
+        };
+        firebase.initializeApp(config);
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <!--    <script src="data-json.js"></script>-->
+
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="web-app.js"></script>
 

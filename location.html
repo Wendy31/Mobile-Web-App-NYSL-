@@ -6,6 +6,7 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -46,7 +47,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="team-info.html">Team</a>
+                            <a class="nav-link" href="index.html">Team</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -61,53 +62,23 @@
 
         <div class="mainBodyHeight">
 
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column" v-for="team in teams">
 
                 <div class="locationBox2">
                     <div class="locationBox">
                         <div class="d-inline-flex p-2 bd-highlight">
-                            <img class="teamLogo" src="assets/team-logo/assnall.png">
-                            <h4>Ass 'n' all</h4>
+
+                            <img class="teamLogo" v-bind:src="'assets/team-logo/' + team.logo + '.png'">
+                            <div class="locationName">
+                                <h5>{{team.name}}</h5>
+                            </div>
+
                         </div>
-                        <p>24 W. Walton St., Chicago, IL 60610</p>
-                    </div>
-                    <iframe class="rounded mx-auto d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5939.308427114838!2d-87.63342706760649!3d41.90029307922042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+USA!5e0!3m2!1sen!2ses!4v1537973493179" allowfullscreen></iframe>
-                </div>
-
-
-                <div class="locationBox2">
-                    <div class="locationBox">
-                        <div class="d-inline-flex p-2 bd-highlight">
-                            <img class="teamLogo" src="assets/team-logo/messi.png">
-                            <h4>About To Get Messi</h4>
+                        <div class="address">
+                            <p>{{team.location}}</p>
                         </div>
-                        <p>1734 N. Orleans St., Chicago, IL 60614</p>
                     </div>
-                    <iframe class="rounded mx-auto d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5938.051657096161!2d-87.64221736760598!3d41.913803479219304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2ses!4v1537975465042" allowfullscreen></iframe>
-                </div>
-
-
-                <div class="locationBox2">
-                    <div class="locationBox">
-                        <div class="d-inline-flex p-2 bd-highlight">
-                            <img class="teamLogo" src="assets/team-logo/octopussy.png">
-                            <h4>The Octopussy</h4>
-                        </div>
-                        <p>2245 N. Southport Ave., Chicago, IL 60614</p>
-                    </div>
-                    <iframe class="rounded mx-auto d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5938.051657096161!2d-87.64221736760598!3d41.913803479219304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2ses!4v1537975465042" allowfullscreen></iframe>
-                </div>
-
-
-                <div class="locationBox2">
-                    <div class="locationBox">
-                        <div class="d-inline-flex p-2 bd-highlight">
-                            <img class="teamLogo" src="assets/team-logo/pornmouth.png">
-                            <h4>Pornmouth FC</h4>
-                        </div>
-                        <p>2245 N. Southport Ave., Chicago, IL 60614</p>
-                    </div>
-                    <iframe class="rounded mx-auto d-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5938.051657096161!2d-87.64221736760598!3d41.913803479219304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+USA!5e0!3m2!1sen!2ses!4v1537975465042" allowfullscreen></iframe>
+                    <iframe v-bind:src="team.map" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -125,7 +96,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <script src="data-json.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="web-app.js"></script>
 

@@ -68,19 +68,38 @@
 
     <div class="mainBodyHeight">
 
-        <img class="teamLogo" src="assets/team-logo/assnall.png">
-        <h5>Ass 'n' all</h5>
+        <div class="dateMatch">
+            <h4>{{matches.date}}</h4>
+        </div>
 
-        <img class="teamLogo" src="assets/team-logo/messi.png">
-        <h5>About To Get Messi</h5>
+        <div class="matchBox">
 
-        <div>
-            <h6 class="bold">Location</h6>
-            <p>Mynydd Newydd3
-                Penlan
-                Swansea
-                Wales
-                SA5 7BS</p>
+            <div class="rowLogoMacth">
+                <div class="leftLogoMatch">
+                    <img class="teamLogoMI" v-bind:src="assets/team-logo/assnall.png">
+                </div>
+                <div class="timeCenterMatch">
+                    <h4>{{matches.game_time}}</h4>
+                </div>
+
+                <div class="rightLogoMatch">
+                    <img class="teamLogoMI" v-bind:src="assets/team-logo/messi.png">
+                </div>
+            </div>
+
+            <div class="namesMatch">
+                <h5 class="nameLeftMatch">{{matches.home_team_name}}</h5>
+                <h5 class="nameRightMatch">{{matches.away_team_name}}</h5>
+            </div>
+
+        </div>
+
+        <div class="addressMatch">
+            <p>{{matches.location}}</p>
+        </div>
+
+        <div class="mapMatch">
+             <iframe v-bind:src="matches.map" allowfullscreen></iframe>
         </div>
 
         <div id="accordion">
@@ -143,7 +162,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
+<script src="data-json.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="web-app.js"></script>
 
