@@ -1,0 +1,509 @@
+/*..............Page................*/
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    padding: 1rem 2rem;
+}
+
+body {
+    background-color: #e8e8f7;
+}
+
+.mainBodyHeight {
+    min-height: 77vh;
+}
+
+
+/*..............Footer................*/
+.iconRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.footerIcon {
+    position: relative;
+    height: 30px;
+}
+
+.footerCenter {
+    text-align: center;
+    font-size: 12px;
+}
+
+footer {
+
+    border-top: 1px solid #807d7d;
+    background-color: white;
+}
+
+
+/*..............Header................*/
+header {
+    background-color: #1973ff;
+    height: 10%;
+    margin-bottom: 0px;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+
+
+
+.teamLogoIndex {
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin-top: 40%;
+    box-shadow: 2px 3px #888888;
+    padding: 10%;
+}
+
+.teamLogo {
+    width: 35%;
+    height: 35%;
+}
+
+.allIndexIcon {
+    position: relative;
+    padding: 20%;
+}
+
+
+/*..............Text...............*/
+.bold {
+    font-weight: bold;
+}
+
+.playerSize {
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.accordianBackground {
+    border: 1px solid navy;
+    background-color: darkgrey;
+}
+
+.fixturesRow {
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    margin: 2px;
+}
+
+.left {
+    display: inline-grid;
+    margin-left: 50%;
+}
+
+.right {
+    display: inline-grid;
+    margin-right: 50%;
+}
+
+/*............NEWS: Read more/ Read less.............*/
+.noBoxButton {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #1973ff;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.noBoxButton:hover {
+    text-decoration: underline;
+    color: mediumblue;
+}
+
+.pTopLeft2 {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.h4Center {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/*...........Location...........*/
+.locationBox {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    background-color: white;
+    padding: 1%;
+}
+
+
+.locationBox2 {
+    position: relative;
+    margin: 7%;
+    border-radius: 20px;
+    border: 1px solid #807d7d;
+    background-color: white;
+    padding: 10%;
+}
+
+.locationName {
+    padding-top: 11%;
+    text-align: center;
+}
+
+.address {
+    text-align: center;
+    padding: 5%;
+}
+
+
+
+/*...........Results...........*/
+.TwoTeamsInRow {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin-top: 5%;
+    margin: auto;
+    height: 20%;
+    padding-top: 6%;
+    box-shadow: 2px 3px #888888;
+    margin-bottom: 5%;
+}
+
+.teamAndLogRowLeft {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.teamAndLogRowRight {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.scoreCenter {
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.teamLogoLeft {
+    width: 30%;
+    height: 70%;
+    padding-left: 2%;
+    padding-bottom: 5%;
+    padding-right: 6%;
+    margin-right: 4%;
+}
+
+.teamLogoRight {
+    width: 30%;
+    height: 70%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+    padding-left: 6%;
+    margin-left: 5%;
+}
+
+
+/*...........Schedule...........*/
+.TwoTeamsInRowSchedule {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin-top: 5%;
+    margin: auto;
+    margin-bottom: 5%;
+    height: 20%;
+    padding-top: 6%;
+    box-shadow: 2px 3px #888888;
+
+}
+
+.teamAndLogoRowLeftSchedule {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    margin-right: 2%;
+}
+
+.teamAndLogoRowRightSchedule {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    margin-left: 2%;
+}
+
+.timeCenter {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding-top: 2%;
+}
+
+.teamLogoLeftSchedule {
+    width: 30%;
+    height: 70%;
+    padding-left: 2%;
+    padding-bottom: 5%;
+    padding-right: 6%;
+    margin-right: 4%;
+}
+
+.teamLogoRightSchedule {
+    width: 30%;
+    height: 70%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+    padding-left: 6%;
+    margin-left: 5%;
+
+}
+
+
+/*...........Contact...........*/
+
+.chat {
+    margin: auto;
+    max-width: 90%;
+    padding: 5%;
+    background-color: white;
+    margin: 5%;
+    height: 500px;
+
+}
+
+.box {
+    width: 100%;
+    padding: 7%;
+    margin: 2% 0 5% 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    height: 300px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.button {
+    background-color: #001dff;
+    color: white;
+    padding: 5% 8%;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 2%;
+    opacity: 0.8;
+    border-radius: 10px;
+
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: #f1f1f1;
+    padding-top: 3%;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5%;    
+}
+
+.bubble {
+    width: 240px;
+    height: auto;
+    display: block;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px #000;
+    position: relative;
+    margin: 0 0 25px;
+}
+
+.chatText {
+    padding: 8px 55px 8px 14px;
+    word-wrap: break-word;
+}
+
+.chatName {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 0 4px;
+    color: #3498db;
+    padding: 5% 0 0 5%;
+}
+
+
+
+/*...............Sign in..............*/
+.registerBox {
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #807d7d;
+    margin: auto;
+    height: 100%;
+    padding: 5%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.buttonSignin {
+    display: flex;
+    justify-content: center;
+    background-color: #001dff;
+    border-radius: 10px;
+    color: white;
+    padding: 5% 8%;
+    border: 0;
+    cursor: pointer;
+    width: 80%;
+    opacity: 0.8;
+    padding: 5%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+
+/*...............Match info..............*/
+.dateMatch {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    font-weight: bold;
+}
+
+.matchBox {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #807d7d;
+    margin: 5%;
+}
+
+.rowLogoMacth {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    height: 100px;
+    padding-top: 2%;
+    padding-bottom: 8%;
+}
+
+.teamLogoMI {
+    height: 90px;
+    width: 90px;
+}
+
+.leftLogoMatch {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    align-content: center;
+}
+
+.rightLogoMatch {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    align-content: center;
+
+}
+
+.timeCenterMatch {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding-top: 10%;
+    color: #ef3b6c;
+    font-family: fantasy;
+
+}
+
+.namesMatch {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-content: center;
+}
+
+.nameLeftMatch {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    color: #1973ff;
+}
+
+.nameRightMatch {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    color: #1973ff;
+}
+
+.addressMatch {
+    text-align: center;
+    font-size: 20px;
+    padding: 5%;
+    margin-bottom: -8%;
+    padding-top: 10%;
+    font-style: italic;
+}
+
+.mapMatch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+#more1,
+#more2 {
+    display: none;
+}
+
+.players {
+    justify-content: space-around;
+    background: url(./assets/background/astroturf.jpg);
+}
+
+/*
+@media only screen and (orientation: landscape) {
+    body {
+        grid: col;
+    }
+}*/
