@@ -339,7 +339,7 @@ header {
     padding-top: 3%;
     width: 95%;
     margin: auto;
-    margin-bottom: 5%;    
+    margin-bottom: 5%;
 }
 
 .bubble {
@@ -489,6 +489,11 @@ header {
     justify-content: center;
     width: 100%;
     margin-bottom: 5%;
+}
+
+.map {
+    width: 100%;
+    height: 150px;
 }
 
 #more1,
